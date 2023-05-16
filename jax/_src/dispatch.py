@@ -491,6 +491,8 @@ def compile_or_get_cached(backend, computation: ir.Module, devices: np.ndarray,
   use_compilation_cache = (compilation_cache.is_initialized() and
                            backend.platform in supported_platforms)
 
+  print(use_compilation_cache)
+
   if not use_compilation_cache:
     return backend_compile(backend, computation, compile_options,
                            host_callbacks)
