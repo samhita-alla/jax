@@ -78,7 +78,7 @@ def initialize_cache(path, cache=None):
 def get_executable(
     cache_key: str, compile_options, backend
 ) -> Optional[xla_client.LoadedExecutable]:
-  print(cache_key)
+  logger.info(cache_key)
   """Returns the cached executable if present, or None otherwise."""
   assert (
       _cache is not None
